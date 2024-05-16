@@ -73,8 +73,8 @@ function NewCustomer({props}) {
 
           <div className = "inputLabel">Address Details</div>
           <div className = "inputBox">
-                <input style = {{width:"46%",height:"88px"}} placeholder = "Address Line1" type="text" value = {addressLine1Data} onChange={(e) => setAddressLine1Data(e.target.value)} />
-                <input style = {{width:"46%",height:"88px"}} placeholder = "Address Line2" type="text" value = {addressLine2Data} onChange={(e) => setAddressLine2Data(e.target.value)}/>
+                <input className = "addressInput" placeholder = "Address Line1" type="text" value = {addressLine1Data} onChange={(e) => setAddressLine1Data(e.target.value)} />
+                <input className = "addressInput" placeholder = "Address Line2" type="text" value = {addressLine2Data} onChange={(e) => setAddressLine2Data(e.target.value)}/>
                 <input placeholder = "City" type="text" value = {city} onChange={(e) => setCity(e.target.value)}/>
                 <input placeholder = "State" type="text" value = {state} onChange={(e) => setState(e.target.value)}/>
                 <input placeholder = "Pincode" type="text" value = {pincode} onChange={(e) => setPincode(e.target.value)}/>
@@ -91,10 +91,10 @@ function NewCustomer({props}) {
 
           <div className = "inputLabel">Address Details</div>
           <div className = "inputBox">
-                <input style = {{width:"30%"}} placeholder = "Authorised Person Name" type="text" value = {authPersonName} onChange={(e) => setAuthPersonName(e.target.value)}/>
-                <input style = {{width:"30%"}}placeholder = "Authorised Person Designation" type="text" value = {authPersonDesign} onChange={(e) => setAuthPersonDesign(e.target.value)} />
-                <input style = {{width:"30%"}}placeholder = "Authorised Person Contact Number" type="text" value = {authContactNumber1} onChange={(e) => setAuthContactNumber1(e.target.value)} />
-                <input style = {{width:"30%"}}placeholder = "Authorised Person Contact Number" type="text" value = {authContactNumber2} onChange={(e) => setAuthContactNumber2(e.target.value)} />
+                <input placeholder = "Authorised Person Name" type="text" value = {authPersonName} onChange={(e) => setAuthPersonName(e.target.value)}/>
+                <input placeholder = "Authorised Person Designation" type="text" value = {authPersonDesign} onChange={(e) => setAuthPersonDesign(e.target.value)} />
+                <input placeholder = "Authorised Person Contact Number" type="text" value = {authContactNumber1} onChange={(e) => setAuthContactNumber1(e.target.value)} />
+                <input placeholder = "Authorised Person Contact Number" type="text" value = {authContactNumber2} onChange={(e) => setAuthContactNumber2(e.target.value)} />
           </div>
 
           <div style = {{display:"flex", 

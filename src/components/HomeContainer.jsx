@@ -53,8 +53,6 @@ function HomeContainer() {
     }
   ])
 
-  console.log("data -- " , data)
-
 const handleDownLoad = useReactToPrint({
     content: () => documentData.current,
     documentTitle:"UserData",
@@ -70,7 +68,7 @@ const handleDownLoad = useReactToPrint({
          <NewCustomer props = {{setAddNewClicked,data,setData}}/>
         </> : 
         <>
-           <div style = {{display:"flex",gap:"10px" , padding:"10px",backgroundColor:"#F6F6F6",borderRadius:"8px",margin:"20px",flexWrap:"wrap"}}>
+           <div className = "iconTitleBoxContainer">
             <IconTitleBox props = {{icon:frameUserIcon , title:"Total Customers" , count: "0"}}/>
             <IconTitleBox props = {{icon:userCheckIcon , title:"Active Customers" , count: "0"}}/>
             <IconTitleBox props = {{icon:userXIcon , title:"InActive Customers" , count: "0"}}/>

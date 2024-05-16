@@ -22,13 +22,13 @@ function Header() {
       </div>
 
       <div className = "settingUserBox">
-            <div>
+            <div className = "hidden">
                <img src = {bellIcon} alt="Logo"/>
             </div>
-            <div>
+            <div className = "hidden">
                <img src = {settingBlackIcon} alt="Logo"/>
             </div>
-            <div className = "ABSLogoBox">
+            <div className = "ABSLogoBox hidden">
                   <div>
                     <img src = {ABSLogoBlack} alt="Logo"/>
                     <span>ABS erp</span>
