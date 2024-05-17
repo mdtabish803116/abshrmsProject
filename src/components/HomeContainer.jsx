@@ -15,7 +15,6 @@ import doubleArrowIcon from "../images/doubleArrow.png"
 import NewCustomer from './NewCustomer';
 
 function HomeContainer() {
-
   const documentData = React.useRef();
   const [addNewClicked , setAddNewClicked] = React.useState(false)
   const [data , setData] = React.useState([
@@ -60,7 +59,7 @@ const handleDownLoad = useReactToPrint({
 
   return (
     <div className = "homeContainer">
-      <Header />
+      <Header/>
       <div style = {{padding:"10px 20px 0px", fontFamily:"sans-serif", fontWeight:"700", fontSize:"16px"}}>Customer Creation</div>
        {
         addNewClicked ? 
@@ -156,8 +155,7 @@ const handleDownLoad = useReactToPrint({
        </div>
       </>
       }
-  
-    
+
     </div>
   )
 }

@@ -8,10 +8,25 @@ import settingBlackIcon from "../images/settingBlackIcon.png";
 import downArrowIcon from "../images/chevron-down.png";
 
 
+import {
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure
+} from '@chakra-ui/react'
+
+
 function Header() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const btnRef = React.useRef()
   return (
     <div className = "header">
       <div className = "toggleSearchBox">
+            <div>
+                 <img  ref = {btnRef} src = {ABSLogoBlack} onClick={onOpen}/>
+            </div>
             <div>
                <img src = {toggleIcon} alt="Logo"/>
             </div>
@@ -20,6 +35,26 @@ function Header() {
                <input placeholder="Search"></input>
             </div>
       </div>
+
+      <Drawer placement="left" 
+      onClose={onClose} 
+      isOpen={isOpen}
+      >
+      <DrawerOverlay />
+        <DrawerContent>
+           <DrawerCloseButton />
+          <DrawerBody className = "drawerBody" >
+             <p>Dashboard</p>
+             <p>Leads</p>
+             <p>Customer</p>
+             <p>Supplier</p>
+             <p>Vendor</p>
+             <p>Category</p>
+             <p>Inventory</p>
+             <p>Settings</p>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
 
       <div className = "settingUserBox">
             <div className = "hidden">
@@ -47,6 +82,7 @@ function Header() {
                   </div>
             </div>
       </div>
+     
     </div>
   )
 }
