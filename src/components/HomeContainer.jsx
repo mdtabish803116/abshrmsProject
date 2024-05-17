@@ -11,7 +11,6 @@ import downloadIcon from "../images/download.png"
 import printerIcon from "../images/printer.png"
 import uploadIcon from "../images/upload.png"
 import plusIcon from "../images/plus.png"
-import doubleArrowIcon from "../images/doubleArrow.png"
 import NewCustomer from './NewCustomer';
 
 function HomeContainer() {
@@ -113,22 +112,11 @@ const handleDownLoad = useReactToPrint({
                                  className="inputCheckBox" 
                                  ></input>
                              </th>
-                             <th>
-                                <span>Customer ID</span>
-                                <img src = {doubleArrowIcon} alt="Logo"/>
-                             </th>
-
-                             <th>
-                                 <span>Customer Company</span>
-                                  <img src = {doubleArrowIcon} alt="Logo"/>
-                             </th>
-
+                             <th>Customer ID</th>
+                             <th>Customer Company</th>
                              <th>Phone Number</th>
                              <th>E-mail ID</th>
-                             <th>
-                                <span>Address</span>
-                                <img src = {doubleArrowIcon} alt="Logo"/>
-                             </th>
+                             <th>Address</th>
                              <th>Authorized Person</th>
                         </tr>
                  </thead>
